@@ -22,10 +22,9 @@ export const Footer: React.FC = () => {
           {/* Col 1 */}
           <div className="space-y-4">
             <ul className="space-y-2 font-semibold">
-              <li><a href="#hero" className="hover:text-[#e07a82] transition-colors">Home</a></li>
               <li><a href="#quem-somos" className="hover:text-[#e07a82] transition-colors">Quem Somos</a></li>
               <li><a href="#clientes" className="hover:text-[#e07a82] transition-colors">Nossos Clientes</a></li>
-              <li><a href="#politicas" className="hover:text-[#e07a82] transition-colors">Políticas de Troca</a></li>
+              
               <li><span className="text-[#4a4a4a]">Nos siga</span></li>
             </ul>
             <div className="flex items-center gap-3 pt-2">
