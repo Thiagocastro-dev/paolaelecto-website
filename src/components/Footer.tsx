@@ -1,7 +1,9 @@
 import React from 'react';
-import { Instagram } from 'lucide-react';
+import { Instagram, ExternalLink } from 'lucide-react';
 
 export const Footer: React.FC = () => {
+  const ifoodUrl = "https://www.ifood.com.br/delivery/belem-pa/macarons-electo---doceria-nazare/3695e4a2-6750-4bde-bc2e-24b88b3076c0?utm_medium=share";
+
   return (
     <footer className="bg-white border-t border-[#f0d1d3] pt-16 pb-12 text-[#4a4a4a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -22,9 +24,9 @@ export const Footer: React.FC = () => {
           {/* Col 1 */}
           <div className="space-y-4">
             <ul className="space-y-2 font-semibold">
+              <li><a href="#hero" className="hover:text-[#e07a82] transition-colors">Home</a></li>
               <li><a href="#quem-somos" className="hover:text-[#e07a82] transition-colors">Quem Somos</a></li>
-              <li><a href="#clientes" className="hover:text-[#e07a82] transition-colors">Nossos Clientes</a></li>
-              
+              <li><a href="#politicas" className="hover:text-[#e07a82] transition-colors">Políticas de Troca</a></li>
               <li><span className="text-[#4a4a4a]">Nos siga</span></li>
             </ul>
             <div className="flex items-center gap-3 pt-2">
@@ -38,7 +40,12 @@ export const Footer: React.FC = () => {
           <div className="space-y-4">
             <ul className="space-y-2 font-semibold">
               <li><a href="#cardapio" className="hover:text-[#e07a82] transition-colors">Encomendas</a></li>
-              <li><a href="#experiencia" className="hover:text-[#e07a82] transition-colors">Lojas</a></li>
+              <li>
+                <a href={ifoodUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#e07a82] transition-colors inline-flex items-center gap-1">
+                  <span>Produtos no iFood</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </li>
               <li><a href="#cardapio" className="hover:text-[#e07a82] transition-colors">Cardápio</a></li>
             </ul>
           </div>

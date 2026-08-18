@@ -1,82 +1,76 @@
 import React from 'react';
-import { MapPin, Clock, Sparkles } from 'lucide-react';
+import { ExternalLink, ShoppingBag, Clock, MapPin, Sparkles } from 'lucide-react';
 
 export const Experience: React.FC = () => {
+  const ifoodUrl = "https://www.ifood.com.br/delivery/belem-pa/macarons-electo---doceria-nazare/3695e4a2-6750-4bde-bc2e-24b88b3076c0?utm_medium=share";
+
   return (
-    <section id="experiencia" className="py-24 bg-[#fef6f6] relative border-t border-[#f0d1d3]/40">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+    <section id="experiencia" className="py-24 bg-[#fff9f9] border-t border-[#f0d1d3]">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
         
-        {/* Top Header Card */}
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-[#f0d1d3] shadow-lg flex flex-col lg:flex-row items-center justify-between gap-8">
-          <div className="space-y-4 max-w-2xl text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#fef6f6] border border-[#f0d1d3] text-xs font-bold text-[#e07a82]">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Ambiente 100% Instagramável</span>
-            </div>
-            <h2 className="text-3xl sm:text-5xl font-bold font-serif text-[#4a4a4a]">
-              Venha viver momentos doces e inesquecíveis conosco
-            </h2>
-            <p className="text-[#4a4a4a]/80 text-base leading-relaxed">
-              Nossa loja foi pensada com todo carinho para ser o cenário perfeito das suas melhores lembranças. Um ambiente aconchegante, cheirinho de bolo saindo do forno, café fresquinho e cantinhos exclusivos para suas fotos.
-            </p>
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#fef6f6] border border-[#f0d1d3] text-[#e07a82] text-xs font-bold tracking-widest uppercase">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Delivery Exclusivo</span>
           </div>
-
-          <div className="flex flex-col sm:flex-row lg:flex-col gap-4 w-full lg:w-72">
-            <div className="flex items-center gap-4 p-4 rounded-2xl bg-[#fef6f6] border border-[#f0d1d3]">
-              <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#e07a82] shadow-xs">
-                <MapPin className="w-5 h-5" />
-              </div>
-              <div>
-                <span className="text-xs text-[#4a4a4a]/60 block font-bold">Localização</span>
-                <span className="text-sm font-bold text-[#4a4a4a]">Belém - PA</span>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4 p-4 rounded-2xl bg-[#fef6f6] border border-[#f0d1d3]">
-              <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#e07a82] shadow-xs">
-                <Clock className="w-5 h-5" />
-              </div>
-              <div>
-                <span className="text-xs text-[#4a4a4a]/60 block font-bold">Atendimento</span>
-                <span className="text-sm font-bold text-[#4a4a4a]">Cafeteria, salão, encomendas</span>
-              </div>
-            </div>
-          </div>
+          <h2 className="text-3xl sm:text-5xl font-bold font-serif text-[#4a4a4a]">
+            Produtos no iFood
+          </h2>
+          <p className="text-base text-[#4a4a4a]/80 font-medium">
+            Peça seus macarons artesanais, caixas de presente e doces finos direto na comodidade da sua casa através do nosso parceiro iFood.
+          </p>
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            {
-              title: "Cantinho do Café",
-              desc: "Aconchego e sabor em cada xícara",
-              image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80"
-            },
-            {
-              title: "Decoração Exclusiva",
-              desc: "Perfeito para fotos e encontros",
-              image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80"
-            },
-            {
-              title: "Vitrine Diária",
-              desc: "Sempre fresquinhos para você",
-              image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&auto=format&fit=crop&q=80"
-            }
-          ].map((item, idx) => (
-            <div key={idx} className="group relative rounded-3xl overflow-hidden shadow-md border border-[#f0d1d3] bg-white h-80 flex flex-col justify-end">
-              <img 
-                src={item.image} 
-                alt={item.title}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        {/* Card destaque iFood */}
+        <div className="max-w-4xl mx-auto bg-white rounded-3xl border border-[#f0d1d3] shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2">
+          <div className="relative h-72 md:h-auto overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1569864358642-9d1684040f43?w=800&auto=format&fit=crop&q=80" 
+              alt="Macarons no iFood"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-6">
+              <span className="bg-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-md">
+                <ShoppingBag className="w-3.5 h-3.5" />
+                Loja Oficial iFood
+              </span>
+            </div>
+          </div>
+
+          <div className="p-8 sm:p-12 flex flex-col justify-between space-y-6">
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold font-serif text-[#4a4a4a]">
+                Macarons Electo & Doceria - Nazaré
+              </h3>
+              <p className="text-sm text-[#4a4a4a]/80 leading-relaxed">
+                Nossos doces fresquinhos entregues com rapidez e todo o cuidado que você merece. Seleção completa de sabores e embalagens para presente.
+              </p>
               
-              <div className="relative p-6 text-white z-10 space-y-1">
-                <h3 className="text-xl font-bold font-serif">{item.title}</h3>
-                <p className="text-xs text-white/80 font-medium">{item.desc}</p>
+              <div className="space-y-2 pt-2 text-xs font-medium text-[#4a4a4a]/70">
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-[#e07a82]" />
+                  <span>Atendendo Belém - PA e arredores</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4 text-[#e07a82]" />
+                  <span>Consulte horários de funcionamento no app</span>
+                </div>
               </div>
             </div>
-          ))}
+
+            <div className="pt-4">
+              <a 
+                href={ifoodUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-4 px-6 rounded-2xl bg-[#ea1d2c] hover:bg-[#d01321] text-white font-bold flex items-center justify-center gap-3 shadow-lg shadow-red-500/20 hover:scale-[1.02] transition-all text-center"
+              >
+                <span>Acessar no iFood</span>
+                <ExternalLink className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
         </div>
 
       </div>

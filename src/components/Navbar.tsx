@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShoppingBag, Menu, X } from 'lucide-react';
+import { ShoppingBag, Menu, X, ExternalLink } from 'lucide-react';
 import { CartItem } from '../types';
 
 interface NavbarProps {
@@ -21,6 +21,8 @@ export const Navbar: React.FC<NavbarProps> = ({ cart, setIsCartOpen, setActiveSe
     }
   };
 
+  const ifoodUrl = "https://www.ifood.com.br/delivery/belem-pa/macarons-electo---doceria-nazare/3695e4a2-6750-4bde-bc2e-24b88b3076c0?utm_medium=share";
+
   return (
     <header className="sticky top-0 z-50 bg-[#ffffff]/95 backdrop-blur-md border-b border-[#f0d1d3] shadow-xs">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
@@ -30,15 +32,15 @@ export const Navbar: React.FC<NavbarProps> = ({ cart, setIsCartOpen, setActiveSe
           onClick={() => handleNavClick('quem-somos')} 
           className="cursor-pointer flex items-center gap-3 group"
         >
-          <div className="w-11 h-11 rounded-full overflow-hidden border border-[#f0d1d3] shadow-xs flex items-center justify-center bg-[#d8b4be]/20 group-hover:scale-105 transition-transform">
-            <svg viewBox="0 0 1000 1000" className="w-full h-full object-cover">
-              <circle cx="500" cy="500" r="500" fill="#d8b4be" />
-              <g transform="translate(150, 250) scale(0.7)">
-                <path d="M150 150 H280 V250 H200 V350 H270 V450 H150 Z" fill="none" />
-              </g>
-              {/* Monogram Representation using SVG paths styled after the user's uploaded emblem */}
-              <text x="500" y="575" fontFamily="serif" fontSize="420" fontWeight="bold" textAnchor="middle" fill="#1e293b">PE</text>
-            </svg>
+          <div className="w-12 h-12 rounded-full overflow-hidden border border-[#f0d1d3] shadow-xs flex items-center justify-center bg-white group-hover:scale-105 transition-transform">
+            <img 
+              src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=150&auto=format&fit=crop&q=80" 
+              alt="Paola Electo Logo" 
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                e.currentTarget.style.display = 'none';
+              }}
+            />
           </div>
           <h1 className="text-xl sm:text-2xl font-bold font-serif tracking-wide text-[#4a4a4a] group-hover:text-[#e07a82] transition-colors">
             Paola Electo
@@ -59,12 +61,15 @@ export const Navbar: React.FC<NavbarProps> = ({ cart, setIsCartOpen, setActiveSe
           >
             Eventos
           </button>
-          <button 
-            onClick={() => handleNavClick('experiencia')}
-            className="text-sm font-semibold text-[#4a4a4a] hover:text-[#e07a82] transition-colors"
+          <a 
+            href={ifoodUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-semibold text-[#4a4a4a] hover:text-[#e07a82] transition-colors flex items-center gap-1.5"
           >
-            Lojas
-          </button>
+            <span>Produtos no iFood</span>
+            <ExternalLink className="w-3.5 h-3.5" />
+          </a>
         </nav>
 
         {/* Right Actions */}
@@ -104,12 +109,15 @@ export const Navbar: React.FC<NavbarProps> = ({ cart, setIsCartOpen, setActiveSe
           >
             Eventos
           </button>
-          <button 
-            onClick={() => handleNavClick('experiencia')}
-            className="block w-full text-left text-base font-semibold text-[#4a4a4a] py-2"
+          <a 
+            href={ifoodUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-between w-full text-left text-base font-semibold text-[#4a4a4a] py-2"
           >
-            Lojas
-          </button>
+            <span>Produtos no iFood</span>
+            <ExternalLink className="w-4 h-4 text-[#e07a82]" />
+          </a>
         </div>
       )}
     </header>

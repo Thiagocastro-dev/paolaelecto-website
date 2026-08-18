@@ -44,7 +44,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
     message += `Que seja doce o dia, a vida e a alma! ❤️`;
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/55919984340097?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/5591998400024?text=${encodedMessage}`;
 
     window.open(whatsappUrl, '_blank');
     setIsSuccess(true);

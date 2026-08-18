@@ -4,7 +4,6 @@ import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Menu } from './components/Menu';
 import { Experience } from './components/Experience';
-import { Testimonials } from './components/Testimonials';
 import { CartDrawer } from './components/CartDrawer';
 import { Footer } from './components/Footer';
 import { Product } from './data/products';
@@ -66,7 +65,6 @@ export function App() {
         <About />
         <Menu onAddToCart={handleAddToCart} />
         <Experience />
-        <Testimonials />
       </main>
 
       <Footer />
