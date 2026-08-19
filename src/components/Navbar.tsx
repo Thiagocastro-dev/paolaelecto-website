@@ -34,7 +34,8 @@ export const Navbar: React.FC<NavbarProps> = ({ cart, setIsCartOpen, setActiveSe
         >
           <div className="w-12 h-12 rounded-full overflow-hidden border border-[#f0d1d3] shadow-xs flex items-center justify-center bg-white group-hover:scale-105 transition-transform">
             <img 
-              src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=150&auto=format&fit=crop&q=80" 
+            /* LOGO */
+              src="\src\img\logo6.png" 
               alt="Paola Electo Logo" 
               className="w-full h-full object-cover"
               onError={(e) => {
@@ -42,9 +43,10 @@ export const Navbar: React.FC<NavbarProps> = ({ cart, setIsCartOpen, setActiveSe
               }}
             />
           </div>
-          <h1 className="text-xl sm:text-2xl font-bold font-serif tracking-wide text-[#4a4a4a] group-hover:text-[#e07a82] transition-colors">
-            Paola Electo
+          <h1 className="text-lg sm:text-lg font-bold font-serif tracking-wide text-[#4a4a4a] group-hover:text-[#e07a82] transition-colors">
+           Confeitaria <br className="hidden sm:block" />  Paola Electo
           </h1>
+           
         </div>
 
         {/* Desktop Navigation */}

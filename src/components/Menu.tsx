@@ -24,10 +24,10 @@ export const Menu: React.FC<MenuProps> = ({ onAddToCart }) => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <h2 className="text-3xl sm:text-5xl font-bold font-serif text-[#e07a82] italic">
-            Cardápio
+            Eventos
           </h2>
           <p className="text-[#4a4a4a] text-lg font-medium">
-            Escolha sua torta, bolo ou salgado favorito e peça direto pelo WhatsApp ou adicione à sacola.
+            Escolha o pacote ideal para seu evento e peça direto pelo WhatsApp ou adicione à sacola.
           </p>
         </div>
 

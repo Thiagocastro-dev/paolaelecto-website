@@ -18,7 +18,7 @@ export const Experience: React.FC = () => {
             Produtos no iFood
           </h2>
           <p className="text-base text-[#4a4a4a]/80 font-medium">
-            Peça seus macarons artesanais, caixas de presente e doces finos direto na comodidade da sua casa através do nosso parceiro iFood.
+            Peça seus macarons artesanais, caixas de presente e doces finos direto na comodidade da sua casa através da nossa loja no iFood.
           </p>
         </div>
 
@@ -41,7 +41,7 @@ export const Experience: React.FC = () => {
           <div className="p-8 sm:p-12 flex flex-col justify-between space-y-6">
             <div className="space-y-4">
               <h3 className="text-2xl font-bold font-serif text-[#4a4a4a]">
-                Macarons Electo & Doceria - Nazaré
+               Confeitaria Paola Electo - Nazaré
               </h3>
               <p className="text-sm text-[#4a4a4a]/80 leading-relaxed">
                 Nossos doces fresquinhos entregues com rapidez e todo o cuidado que você merece. Seleção completa de sabores e embalagens para presente.

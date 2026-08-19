@@ -6,6 +6,7 @@ import { Menu } from './components/Menu';
 import { Experience } from './components/Experience';
 import { CartDrawer } from './components/CartDrawer';
 import { Footer } from './components/Footer';
+import { WhatsAppButton } from './components/WhatsAppButton';
 import { Product } from './data/products';
 import { CartItem } from './types';
 
@@ -53,7 +54,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#171717] text-white selection:bg-[#9E7FFF] selection:text-white">
+    <div className="min-h-screen bg-[#171717] text-white selection:bg-[#9E7FFF] selection:text-white relative">
       <Navbar 
         cart={cart} 
         setIsCartOpen={setIsCartOpen} 
@@ -76,6 +77,9 @@ export function App() {
         onUpdateQuantity={handleUpdateQuantity}
         onClearCart={handleClearCart}
       />
+
+      {/* Botão Flutuante do WhatsApp no Canto Inferior Direito */}
+      <WhatsAppButton />
     </div>
   );
 }

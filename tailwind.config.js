@@ -12,7 +12,7 @@ export default {
           pinkBg: '#fef6f6',    // Soft cream/white background
           pinkCard: '#ffffff',  // White surfaces
           accent: '#d96b70',    // Deep rose accent
-          textDark: '#4a4a4a',  // Dark gray text
+          textDark: '#c2bfbf',  // Dark gray text
           surface: '#ffffff',   // White surfaces
           border: '#f0d1d3',    // Light pink border
         }

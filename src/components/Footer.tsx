@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
             <h2 className="text-4xl font-bold font-serif tracking-wide text-[#e07a82]">
               Paola Electo
             </h2>
-            <p className="text-sm font-semibold tracking-widest uppercase text-[#4a4a4a]/70 mt-1">Doceria & Cafeteria</p>
+            <p className="text-sm font-semibold tracking-widest uppercase text-[#4a4a4a]/70 mt-1">Doceria & Confeitaria</p>
           </div>
         </div>
 
@@ -24,13 +24,11 @@ export const Footer: React.FC = () => {
           {/* Col 1 */}
           <div className="space-y-4">
             <ul className="space-y-2 font-semibold">
-              <li><a href="#hero" className="hover:text-[#e07a82] transition-colors">Home</a></li>
               <li><a href="#quem-somos" className="hover:text-[#e07a82] transition-colors">Quem Somos</a></li>
-              <li><a href="#politicas" className="hover:text-[#e07a82] transition-colors">Políticas de Troca</a></li>
-              <li><span className="text-[#4a4a4a]">Nos siga</span></li>
+              <li><span className="text-[#4a4a4a]">Nos siga no Instagram</span></li>
             </ul>
             <div className="flex items-center gap-3 pt-2">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-[#fef6f6] border border-[#f0d1d3] text-[#e07a82] flex items-center justify-center shadow-xs hover:scale-110 transition-transform">
+              <a href="https://www.instagram.com/paolaelecto/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-[#fef6f6] border border-[#f0d1d3] text-[#e07a82] flex items-center justify-center shadow-xs hover:scale-110 transition-transform">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
@@ -39,45 +37,34 @@ export const Footer: React.FC = () => {
           {/* Col 2 */}
           <div className="space-y-4">
             <ul className="space-y-2 font-semibold">
-              <li><a href="#cardapio" className="hover:text-[#e07a82] transition-colors">Encomendas</a></li>
+              <li><a href="#cardapio" className="hover:text-[#e07a82] transition-colors">Eventos</a></li>
               <li>
                 <a href={ifoodUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#e07a82] transition-colors inline-flex items-center gap-1">
                   <span>Produtos no iFood</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </li>
-              <li><a href="#cardapio" className="hover:text-[#e07a82] transition-colors">Cardápio</a></li>
+              <li><a href="#cardapio" className="hover:text-[#e07a82] transition-colors">Torres</a></li>
             </ul>
           </div>
 
-          {/* Col 3: Atendimento */}
-          <div className="space-y-3 font-medium">
+              {/* Col 3: Atendimento */}
+            <div className="space-y-3 font-medium">
             <h3 className="font-bold font-serif text-lg text-[#e07a82]">Atendimento</h3>
             <p className="text-sm">
-              <strong className="block text-[#4a4a4a]">Unidade Duque</strong>
-              (91) 99840-0024
+              <strong className="block text-[#4a4a4a]">Whatsapp</strong>
+              (91) 98434-0097
             </p>
-            <p className="text-sm">
-              <strong className="block text-[#4a4a4a]">Unidade Grão</strong>
-              (91) 98401-9288
-            </p>
-            <p className="text-sm">
-              <strong className="block text-[#4a4a4a]">Unidade Metrópole</strong>
-              (91) 98413-9912
-            </p>
-            <p className="text-sm">
-              <strong className="block text-[#4a4a4a]">Unidade Patio</strong>
-              (91) 98409-5909
-            </p>
+         
           </div>
-
+          
         </div>
-
+            
         {/* Copyright */}
         <div className="pt-8 border-t border-[#f0d1d3] flex flex-col sm:flex-row items-center justify-between text-xs font-semibold text-[#4a4a4a]/80 gap-4">
-          <p>Paola Electo 2026. Todos os direitos reservados - CNPJ: 14.517.313/0001-26</p>
+          <p>Paola Electo 2026. Todos os direitos reservados - CNPJ: 19.099.777/0001-83</p>
           <div className="flex items-center gap-2">
-            <span>Desenvolvido com carinho</span>
+            <span>Desenvolvido por Thiago Castro</span>
           </div>
         </div>
 
