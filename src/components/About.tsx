@@ -2,7 +2,8 @@ import React from 'react';
 
 export const About: React.FC = () => {
   return (
-    <section id="quem-somos" className="relative min-h-[90vh] flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8 bg-[#fef6f6]">
+    // 🔴 ALTERAÇÃO AQUI: bg-[#fef6f6] foi alterado para bg-transparent
+    <section id="quem-somos" className="relative min-h-[90vh] flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8 bg-transparent">
       <div className="max-w-5xl mx-auto w-full">
         
         {/* Hero Banner with background image and centered glass card matching screenshot */}

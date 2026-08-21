@@ -18,7 +18,8 @@ export const Menu: React.FC<MenuProps> = ({ onAddToCart }) => {
   });
 
   return (
-    <section id="cardapio" className="py-24 bg-[#fef6f6] relative border-t border-[#f0d1d3]/40">
+    // 🔴 ALTERAÇÃO AQUI: bg-[#fef6f6] alterado para bg-transparent
+    <section id="cardapio" className="py-24 bg-transparent relative border-t border-[#f0d1d3]/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -35,7 +36,8 @@ export const Menu: React.FC<MenuProps> = ({ onAddToCart }) => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-12">
           
           {/* Category Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-2 bg-white p-2 rounded-2xl border border-[#f0d1d3] shadow-xs">
+          {/* 🔴 ALTERAÇÃO AQUI: Adicionado bg-white/80 backdrop-blur-md */}
+          <div className="flex flex-wrap items-center justify-center gap-2 bg-white/80 backdrop-blur-md p-2 rounded-2xl border border-[#f0d1d3] shadow-xs">
             {[
               { id: 'todos', label: 'Todos' },
               { id: 'bolos', label: 'Bolos & Tortas Doces' },
@@ -48,7 +50,7 @@ export const Menu: React.FC<MenuProps> = ({ onAddToCart }) => {
                 className={`px-5 py-2.5 rounded-xl text-sm font-bold transition-all ${
                   selectedCategory === cat.id
                     ? 'bg-[#e07a82] text-white shadow-md'
-                    : 'text-[#4a4a4a] hover:bg-[#fef6f6]'
+                    : 'text-[#4a4a4a] hover:bg-white/50' // 🔴 Hover ajustado para combinar com o vidro
                 }`}
               >
                 {cat.label}
@@ -59,12 +61,13 @@ export const Menu: React.FC<MenuProps> = ({ onAddToCart }) => {
           {/* Search Bar */}
           <div className="relative w-full md:w-80">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#4a4a4a]/60" />
+            {/* 🔴 ALTERAÇÃO AQUI: Adicionado bg-white/80 backdrop-blur-md */}
             <input
               type="text"
               placeholder="Buscar no cardápio..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-white border border-[#f0d1d3] rounded-2xl pl-12 pr-4 py-3 text-[#4a4a4a] placeholder-[#4a4a4a]/50 focus:outline-none focus:border-[#e07a82] transition-colors text-sm font-medium shadow-xs"
+              className="w-full bg-white/80 backdrop-blur-md border border-[#f0d1d3] rounded-2xl pl-12 pr-4 py-3 text-[#4a4a4a] placeholder-[#4a4a4a]/50 focus:outline-none focus:border-[#e07a82] transition-colors text-sm font-medium shadow-xs"
             />
           </div>
 
@@ -72,7 +75,8 @@ export const Menu: React.FC<MenuProps> = ({ onAddToCart }) => {
 
         {/* Products Grid */}
         {filteredProducts.length === 0 ? (
-          <div className="text-center py-20 bg-white rounded-3xl border border-[#f0d1d3]">
+          // 🔴 ALTERAÇÃO AQUI: Adicionado bg-white/80 backdrop-blur-md
+          <div className="text-center py-20 bg-white/80 backdrop-blur-md rounded-3xl border border-[#f0d1d3]">
             <p className="text-lg text-[#4a4a4a] font-medium">Nenhum produto encontrado com essa busca.</p>
           </div>
         ) : (
@@ -80,10 +84,11 @@ export const Menu: React.FC<MenuProps> = ({ onAddToCart }) => {
             {filteredProducts.map((product) => (
               <div 
                 key={product.id}
-                className="bg-white rounded-3xl border border-[#f0d1d3] overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group"
+                // 🔴 ALTERAÇÃO AQUI: Adicionado bg-white/80 backdrop-blur-md aos Cards
+                className="bg-white/80 backdrop-blur-md rounded-3xl border border-[#f0d1d3] overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group"
               >
                 {/* Image Container */}
-                <div className="relative h-64 overflow-hidden bg-gray-100">
+                <div className="relative h-64 overflow-hidden bg-gray-100/50">
                   <img
                     src={product.image}
                     alt={product.name}

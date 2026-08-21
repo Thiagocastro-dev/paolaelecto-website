@@ -5,12 +5,14 @@ export const Experience: React.FC = () => {
   const ifoodUrl = "https://www.ifood.com.br/delivery/belem-pa/macarons-electo---doceria-nazare/3695e4a2-6750-4bde-bc2e-24b88b3076c0?utm_medium=share";
 
   return (
-    <section id="experiencia" className="py-24 bg-[#fff9f9] border-t border-[#f0d1d3]">
+    // 🔴 ALTERAÇÃO AQUI: bg-[#fff9f9] alterado para bg-transparent
+    <section id="experiencia" className="py-24 bg-transparent border-t border-[#f0d1d3]/50">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#fef6f6] border border-[#f0d1d3] text-[#e07a82] text-xs font-bold tracking-widest uppercase">
+          {/* 🔴 ALTERAÇÃO AQUI: Fundo da badge levemente transparente com blur */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/60 backdrop-blur-sm border border-[#f0d1d3] text-[#e07a82] text-xs font-bold tracking-widest uppercase">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Delivery Exclusivo</span>
           </div>
@@ -23,7 +25,8 @@ export const Experience: React.FC = () => {
         </div>
 
         {/* Card destaque iFood */}
-        <div className="max-w-4xl mx-auto bg-white rounded-3xl border border-[#f0d1d3] shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2">
+        {/* 🔴 ALTERAÇÃO AQUI: bg-white alterado para bg-white/80 e backdrop-blur-md (Efeito de Vidro) */}
+        <div className="max-w-4xl mx-auto bg-white/80 backdrop-blur-md rounded-3xl border border-[#f0d1d3] shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2">
           <div className="relative h-72 md:h-auto overflow-hidden">
             <img 
               src="https://images.unsplash.com/photo-1569864358642-9d1684040f43?w=800&auto=format&fit=crop&q=80" 
