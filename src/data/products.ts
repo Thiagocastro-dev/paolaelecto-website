@@ -10,26 +10,7 @@ export interface Product {
 }
 
 export const PRODUCTS: Product[] = [
-  {
-    id: 'supimpa-20',
-    name: 'Supimpa de Cupuaçu (20cm)',
-    category: 'bolos',
-    size: '20cm',
-    description: 'Massa de Pão de ló bem molhadinha, um delicioso recheio de creme de cupuaçu e finalizado com coco ralado!',
-    price: 205.00,
-    image: 'https://images.unsplash.com/photo-1535141192574-5d4897c13136?w=800&auto=format&fit=crop&q=80',
-    badge: 'Mais Vendido'
-  },
-  {
-    id: 'supimpa-30',
-    name: 'Supimpa de Cupuaçu (30cm)',
-    category: 'bolos',
-    size: '30cm',
-    description: 'Massa de Pão de ló bem molhadinha, um delicioso recheio de creme de cupuaçu e finalizado com coco ralado!',
-    price: 310.00,
-    image: 'https://images.unsplash.com/photo-1535141192574-5d4897c13136?w=800&auto=format&fit=crop&q=80',
-    badge: 'Família'
-  },
+ 
   {
     id: 'nega-maluca-20',
     name: 'Nega Maluca (20cm)',
@@ -153,47 +134,5 @@ export interface Review {
   rating: number;
 }
 
-export const INITIAL_REVIEWS: Review[] = [
-  {
-    id: '1',
-    name: 'Gabriel Castro',
-    role: 'Fotógrafo de alimentos e produtos',
-    comment: 'Os doces são maravilhosos e o ambiente é 100% instagramável. Tudo tão perfeito!',
-    rating: 5
-  },
-  {
-    id: '2',
-    name: 'Jacqueline Fontes',
-    role: 'Assistente Social',
-    comment: 'Sensacional esse lugar! Além de uma decoração aconchegante, é impossível não apreciar tanta gostosura, amo a apresentação de cada doce, tortas e bolos.',
-    rating: 5
-  },
-  {
-    id: '3',
-    name: 'Daniela',
-    role: 'Analista',
-    comment: 'A torta de morango é a melhor da cidade! Atendimento impecável das três irmãs.',
-    rating: 5
-  },
-  {
-    id: '4',
-    name: 'Gabriela Conde',
-    role: 'Dentista',
-    comment: 'A melhor doceria de Belém!! Meu favorito é o bolo gelado de ninho e o atendimento de primeira.',
-    rating: 5
-  },
-  {
-    id: '5',
-    name: 'Pérola',
-    role: 'Advogada',
-    comment: 'Melhor doceria de Belém, sem dúvida, já fui em outras docerias, mas nada se comparou ao atendimento da Delalê. Amo a torta Nega Maluca.',
-    rating: 5
-  },
-  {
-    id: '6',
-    name: 'Vera Ferreira',
-    role: 'Assistente social',
-    comment: 'Amo os doces, macarons, café e o atendimento. E também o social que vocês fazem, sempre que possível atendendo com muito carinho!',
-    rating: 5
-  }
-];
+
+

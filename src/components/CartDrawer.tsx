@@ -30,7 +30,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
     e.preventDefault();
     if (cart.length === 0) return;
 
-    let message = `*✨ NOVO PEDIDO - PAOLA ELECTO ✨*\n\n`;
+    let message = `*🌟 NOVO PEDIDO - PAOLA ELECTO 🌟*\n\n`;
     if (customerName) message += `*Cliente:* ${customerName}\n`;
     if (address) message += `*Endereço de Entrega:* ${address}\n`;
     message += `*Forma de Pagamento:* ${paymentMethod}\n\n`;
@@ -41,10 +41,10 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
     });
 
     message += `\n*Total:* R$ ${totalAmount.toFixed(2)}\n\n`;
-    message += `Que seja doce o dia, a vida e a alma! ❤️`;
+    message += `Agradecemos o seu pedido! 💕❤️💕`;
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/55919984340097?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/5591984340097?text=${encodedMessage}`;
 
     window.open(whatsappUrl, '_blank');
     setIsSuccess(true);
@@ -82,7 +82,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
               </div>
               <h4 className="text-xl font-bold text-[#4a4a4a] font-serif">Pedido Enviado com Sucesso!</h4>
               <p className="text-sm text-[#4a4a4a]/80">
-                Seu pedido foi encaminhado para o WhatsApp da Paola Electo. Nossas atendentes já vão confirmar os detalhes com você!
+                Seu pedido foi encaminhado para o WhatsApp da Loja. Nossas atendentes já vão confirmar os detalhes com você!
               </p>
               <button
                 onClick={() => {
